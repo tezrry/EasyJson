@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0FFC611-86E0-4F42-82EB-01DD379FB8F1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UniGames.EasyJson</RootNamespace>
+    <AssemblyName>EasyJson</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EasyJson.cs" />
+    <Compile Include="EasyJsonController.cs" />
+    <Compile Include="EasyJsonData.cs" />
+    <Compile Include="EasyJsonWriter.cs" />
+    <Compile Include="Attribute\EasyJsonExcludeAttribute.cs" />
+    <Compile Include="Attribute\EasyJsonIncludeAttribute.cs" />
+    <Compile Include="Attribute\EasyJsonOptionsAttribute.cs" />
+    <Compile Include="Exception\EasyJsonException.cs" />
+    <Compile Include="Internal\JsonUtil.cs" />
+    <Compile Include="Internal\Controller\JsonArrayController.cs" />
+    <Compile Include="Internal\Controller\JsonBoolController.cs" />
+    <Compile Include="Internal\Controller\JsonByteController.cs" />
+    <Compile Include="Internal\Controller\JsonCharController.cs" />
+    <Compile Include="Internal\Controller\JsonDecimalController.cs" />
+    <Compile Include="Internal\Controller\JsonDoubleController.cs" />
+    <Compile Include="Internal\Controller\JsonEnumController.cs" />
+    <Compile Include="Internal\Controller\JsonFloatController.cs" />
+    <Compile Include="Internal\Controller\JsonInt16Controller.cs" />
+    <Compile Include="Internal\Controller\JsonInt32Controller.cs" />
+    <Compile Include="Internal\Controller\JsonInt64Controller.cs" />
+    <Compile Include="Internal\Controller\JsonStringController.cs" />
+    <Compile Include="Internal\Controller\JsonSystemTypeController.cs" />
+    <Compile Include="Internal\Controller\JsonUInt16Controller.cs" />
+    <Compile Include="Internal\Controller\JsonUInt32Controller.cs" />
+    <Compile Include="Internal\Controller\JsonUInt64Controller.cs" />
+    <Compile Include="Internal\Controller\JsonValueTypeController.cs" />
+    <Compile Include="Internal\Metadata\JsonClassMetadata.cs" />
+    <Compile Include="Internal\Metadata\JsonItemMetadata.cs" />
+    <Compile Include="Internal\Controller\JsonNullableController.cs" />
+    <Compile Include="Internal\Controller\JsonDictionaryController.cs" />
+    <Compile Include="Internal\Controller\JsonListController.cs" />
+    <Compile Include="Internal\Controller\JsonDateTimeController.cs" />
+    <Compile Include="Internal\Controller\JsonDataController.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Exception\" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <VersionControlPolicy inheritsSet="Mono">
+            <CommitMessageStyle LastFilePostfix=":&#xA;  " IncludeDirectoryPaths="True" />
+          </VersionControlPolicy>
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>
